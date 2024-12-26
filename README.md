@@ -14,11 +14,11 @@
     Notice: I ordered all the pcbs in JLC.com and buy the parts from taobao.com.
 
 ## 3D model 
-    I remodel the Kame for Thingivers in Fusion 360 and printed the parts on (https://www.thingiverse.com/thing:1265766).
+    I remodel the Kame for Thingivers in Fusion 360 and printed the parts on [Thingiverse](https://www.thingiverse.com/thing:1265766).
 
 ## Code 
     I mainly used Arduino IDE V2.3.4 to compile and edit the code and used vscode to edit and preview the Html code. There are 3 file in my code. "LU9685.h","kame.h" and main.c.
-    ### LU9685
+   ### "LU9685.h"
     I want to "LU9685.h" first. The header file use <Wire.h> to communicate with the i^2C from controller to esp32cam. It contains 6 functions. 
     Write register()function 
     
