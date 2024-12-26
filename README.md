@@ -1,5 +1,5 @@
 # SECURITY KAME
-#### Video Demo:  <[URL HERE](https://youtu.be/Wg2thCpf57M?si=TqslLem-lVwnqvRm)>
+#### Video Demo:  <https://youtu.be/Wg2thCpf57M?si=TqslLem-lVwnqvRm>
 #### Description:
  Hello!This project is made for CS50 final project.
 
