@@ -87,19 +87,19 @@ The project uses **Arduino IDE v2.3.4** for compiling and editing the code, with
            }
         ```
       - setServoPositions
-     ```cpp
-        void setServoPosition(uint8_t servo, uint8_t degree) {
-           if (servo >= 20 || degree > 180) {
-                 return;  // Invalid parameters, exit
-             }
-           writeRegister(servo, degree);
-        }
-     ```
-     >Use to control a single servo with degree
-     ```cpp
-        //example usage
-        serServoPosition(0,90); //90 degree in servo number 0
-     ```        
+        ```cpp
+           void setServoPosition(uint8_t servo, uint8_t degree) {
+              if (servo >= 20 || degree > 180) {
+                    return;  // Invalid parameters, exit
+                }
+              writeRegister(servo, degree);
+           }
+        ```
+        >Use to control a single servo with degree
+        ```cpp
+           //example usage
+           serServoPosition(0,90); //90 degree in servo number 0
+        ```        
 
 2. **`kame.h`**  
    - Handles the robot's movements and gait algorithms.  
