@@ -4,8 +4,7 @@
  Hello!This project is made for CS50 final project.
 
 The idea\
-
-At first I plan to make a website but I see a video of qwery3 qaudrapot by Erik lely on YouTube (https://youtu.be/PYqUsu_SGVk?si=kcckK-nIfiR_I-Pc). But he doesn't provide any code or 3d files. Instead he said it is a modified version of Kame on Thingiverse(https://www.thingiverse.com/thing:1265766). I modified the 3d designs in fusion 360 and also make custom pcb for it.
+  At first I plan to make a website but I see a video of qwery3 qaudrapot by Erik lely on YouTube (https://youtu.be/PYqUsu_SGVk?si=kcckK-nIfiR_I-Pc). But he doesn't provide any code or 3d files. Instead he said it is a modified version of Kame on Thingiverse(https://www.thingiverse.com/thing:1265766). I modified the 3d designs in fusion 360 and also make custom pcb for it.
     Also used ESP32S with OV2640 camera for live steaming the fortage from the robot. Add oled for the robot's face. I wrote a library to control LU9685 which is the chinese clone of PCA9685. And borrowed some Idea from the esp32cam car project by Hash Include Electronics (https://www.youtube.com/watch?v=HfQ7lhhgDOk&t=630s). 
 
 Electronics
