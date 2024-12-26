@@ -86,7 +86,7 @@ The project uses **Arduino IDE v2.3.4** for compiling and editing the code, with
              initilizeLU9685(0x80,12,13);
            }
         ```
-   - setServoPositions
+      - setServoPositions
      ```cpp
         void setServoPosition(uint8_t servo, uint8_t degree) {
            if (servo >= 20 || degree > 180) {
