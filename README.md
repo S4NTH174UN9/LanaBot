@@ -36,7 +36,7 @@ Here’s what I did:
      - **MPU6050 Gyro Sensor**.  
      - **ACS712 Current Sensor**.  
 
-[!NOTE]  
+> [!NOTE]  
 > Ordered PCBs from [JLCPCB](https://www.jlc.com/).  
 > Purchased parts from [TaoBao](https://www.taobao.com/).  
 
@@ -175,7 +175,7 @@ The project uses **Arduino IDE v2.3.4** for compiling and editing the code, with
      turnLeft();
      turnRight();
      ```
-     [!TIPS]
+     > [!TIPS]
      > I can add more movements as I wish . I think my code is very flexible and easy to understand but still have many rooms for improvements.  
 
 3. **`main.c`**  
