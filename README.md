@@ -175,8 +175,8 @@ The project uses **Arduino IDE v2.3.4** for compiling and editing the code, with
      turnLeft();
      turnRight();
      ```
-     > [!TIP]
-     > I can add more movements as I wish . I think my code is very flexible and easy to understand but still have many rooms for improvements.  
+> [!TIP]
+> I can add more movements as I wish . I think my code is very flexible and easy to understand but still have many rooms for improvements.  
 
 3. **`main.c`**  
    - Integrates the project’s core functionalities.  
