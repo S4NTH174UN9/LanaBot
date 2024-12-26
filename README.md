@@ -100,6 +100,63 @@ The project uses **Arduino IDE v2.3.4** for compiling and editing the code, with
            //example usage
            serServoPosition(0,90); //90 degree in servo number 0
         ```        
+      - **setAllServos**
+        ```cpp
+        void setAllServos(uint8_t address, const int *degrees, uint8_t length) {
+            if (length > 20) {
+                return;  // Ensure array length does not exceed maximum servo channels
+            }
+            Wire.beginTransmission(address);
+            Wire.write(0xFD);  // Command to write to all servos
+            for (uint8_t i = 0; i < length; i++) {
+                Wire.write(degrees[i] > 180 ? 180 : degrees[i]);  // Clamp values
+            }
+            Wire.endTransmission();
+        }
+        ```
+        > This function controls all servos using an array of degree values. It ensures that the input length does not exceed the maximum number of servo channels (20).  
+        ```cpp
+        //Example Usage
+        int degrees[] = {90, 45, 180, 0}; // Define angles for each servo
+        setAllServos(0x80, degrees, 4); // Set first 4 servos to the specified angles
+        ```
+
+      - **DCAS (Direct Control All Servos)**
+        ```cpp
+        void DCAS(uint8_t d1 = 0, uint8_t d2 = 0, uint8_t d3 = 0, uint8_t d4 = 0, uint8_t d5 = 0,
+                             uint8_t d6 = 0, uint8_t d7 = 0, uint8_t d8 = 0, uint8_t d9 = 0, uint8_t d10 = 0,
+                             uint8_t d11 = 0, uint8_t d12 = 0, uint8_t d13 = 0, uint8_t d14 = 0, uint8_t d15 = 0,
+                             uint8_t d16 = 0, uint8_t d17 = 0, uint8_t d18 = 0, uint8_t d19 = 0, uint8_t d20 = 0) {
+            uint8_t degrees[20] = {d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, d13, d14, d15, d16, d17, d18, d19, d20};
+            for (uint8_t i = 0; i < 20; i++) {
+                degrees[i] = (degrees[i] > 180) ? 180 : degrees[i];  // Clamp values
+            }
+
+            Wire.beginTransmission(ADDRESS);
+            Wire.write(0xFD);  // Command to write to all servos simultaneously
+            for (uint8_t i = 0; i < 20; i++) {
+                Wire.write(degrees[i]);
+            }
+            Wire.endTransmission();
+        }
+        ```
+        > This function allows direct control of all 20 servos using individual degree inputs. Values are clamped to the valid range (0-180).  
+        ```cpp
+        //Example Usage
+        DCAS(90, 45, 135, 180, 90, 45); // Set the first six servos to the specified angles
+        ```
+
+      - **resetServos**
+        ```cpp
+        void resetServos() {
+            writeRegister(0xFB, 0xFB);  // Reset command
+        }
+        ```
+        > Resets all servos to their default state. This function is useful for reinitializing or clearing servo states during operation.  
+        ```cpp
+        //Example Usage
+        resetServos(); // Reset all servos
+        ```
 
 2. **`kame.h`**  
    - Handles the robot's movements and gait algorithms.  
