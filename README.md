@@ -53,7 +53,7 @@ The project uses **Arduino IDE v2.3.4** for compiling and editing the code, with
 1. **`LU9685.h`**  
    - Manages I²C communication with the LU9685 servo controller.  
    - It contains 6 functions:  
-
+      -writeRegister
      ```cpp
      bool writeRegister(uint8_t reg, uint8_t value) {
          Wire.beginTransmission(ADDRESS);
@@ -63,10 +63,10 @@ The project uses **Arduino IDE v2.3.4** for compiling and editing the code, with
      }
      ```
      > write register functions get two arguments and send to the controller . First is the function register and second is the value.
-     **Example usage** to reset all servos
-     ```cpp
-     writeRegister(0xFD,0xFD);
-     ```
+        -**Example usage**
+        ```cpp
+        writeRegister(0xFD,0xFD); //Resetallservos
+        ```
 
 2. **`kame.h`**  
    - Handles the robot's movements and gait algorithms.  
