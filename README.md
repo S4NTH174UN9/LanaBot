@@ -1,5 +1,5 @@
 # SECURITY KAME
-#### Video Demo:  <URL HERE>
+#### Video Demo:  <[URL HERE](https://youtu.be/Wg2thCpf57M?si=TqslLem-lVwnqvRm)>
 #### Description:
  Hello!This project is made for CS50 final project.
 
@@ -18,7 +18,7 @@ Electronics\
 
 Code\
     I mainly used Arduino IDE V2.3.4 to compile and edit the code and used vscode to edit and preview the Html code. There are 3 file in my code. "LU9685.h","kame.h" and main.c.
-** "LU9685.h" **
+**LU9685.h**
     I want to "LU9685.h" first. The header file use <Wire.h> to communicate with the i^2C from controller to esp32cam. It contains 6 functions. 
     Write register()function 
     
