@@ -63,7 +63,7 @@ The project uses **Arduino IDE v2.3.4** for compiling and editing the code, with
      }
      ```
      > write register functions get two arguments and send to the controller . First is the function register and second is the value.
-     **Example usage to reset all servos
+     **Example usage** to reset all servos
      ```cpp
      writeRegister(0xFD,0xFD);
      ```
