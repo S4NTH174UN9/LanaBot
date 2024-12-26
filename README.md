@@ -1,7 +1,7 @@
 # SECURITY KAME
 #### Video Demo:  <https://youtu.be/Wg2thCpf57M?si=TqslLem-lVwnqvRm>
 #### Description:
- Hello!This project is made for CS50 final project.
+This project is made for CS50 final project.
 
 The idea\
   At first I plan to make a website but I see a video of qwery3 qaudrapot by Erik lely on YouTube (https://youtu.be/PYqUsu_SGVk?si=kcckK-nIfiR_I-Pc). But he doesn't provide any code or 3d files. Instead he said it is a modified version of Kame on Thingiverse(https://www.thingiverse.com/thing:1265766). I modified the 3d designs in fusion 360 and also make custom pcb for it.
