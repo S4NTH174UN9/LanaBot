@@ -22,14 +22,13 @@ Code\
 **LU9685.h**
     I want to "LU9685.h" first. The header file use <Wire.h> to communicate with the i^2C from controller to esp32cam. It contains 6 functions. 
     1. Write register()function 
-       **Renders as:**
        ```cpp
-       bool writeRegister(uint8_t reg, uint8_t value) {
-    Wire.beginTransmission(ADDRESS);
-    Wire.write(reg);
-    Wire.write(value);
-    return (Wire.endTransmission() == 0);  // Return success/failure
-    }
+        bool writeRegister(uint8_t reg, uint8_t value) {
+        Wire.beginTransmission(ADDRESS);
+        Wire.write(reg);
+        Wire.write(value);
+        return (Wire.endTransmission() == 0);  // Return success/failure
+        }
 
        
     
