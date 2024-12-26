@@ -64,9 +64,42 @@ The project uses **Arduino IDE v2.3.4** for compiling and editing the code, with
      ```
      > write register functions get two arguments and send to the controller . First is the function register and second is the value.
         ```cpp
-        //Exaple Usage
+        //Example Usage
         writeRegister(0xFD,0xFD); //Resetallservos
         ```
+      - initializeLU9685
+        ```cpp
+           void initializeLU9685(uint8_t address = DEFAULT_ADDRESS, uint8_t SDA = DEFAULT_SDA, uint8_t SCL = DEFAULT_SCL) {
+          if (address > 0x80) {
+              address = DEFAULT_ADDRESS;  // Clamp address to default if out of range
+          }
+          ADDRESS = address;
+      
+          Wire.begin(SDA, SCL);
+         }
+        ```
+        > This function is used to initilize the wire communication address with the board and configure the **SDA**,**SCL** pins.
+          ```cpp
+           //Example Usage
+           void setup(){
+          //other codes
+          initilizeLU9685(0x80,12,13);
+          }
+          ```
+      - setServoPositions
+        ```cpp
+         void setServoPosition(uint8_t servo, uint8_t degree) {
+             if (servo >= 20 || degree > 180) {
+                 return;  // Invalid parameters, exit
+             }
+             writeRegister(servo, degree);
+            }
+        ```
+        >Use to control a single servo with degree
+        ```cpp
+        //example usage
+        serServoPosition(0,90); //90 degree in servo number 0
+        ```        
 
 2. **`kame.h`**  
    - Handles the robot's movements and gait algorithms.  
