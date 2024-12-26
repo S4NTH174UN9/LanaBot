@@ -52,7 +52,7 @@ The project uses **Arduino IDE v2.3.4** for compiling and editing the code, with
 
 1. **`LU9685.h`**  
    - Manages I²C communication with the LU9685 servo controller.  
-   - Example function:  
+   - It contains 6 functions:  
 
      ```cpp
      bool writeRegister(uint8_t reg, uint8_t value) {
@@ -61,6 +61,11 @@ The project uses **Arduino IDE v2.3.4** for compiling and editing the code, with
          Wire.write(value);
          return (Wire.endTransmission() == 0);  // Return success/failure
      }
+     ```
+     > write register functions get two arguments and send to the controller . First is the function register and second is the value.
+     **Example usage to reset all servos
+     ```cpp
+     writeRegister(0xFD,0xFD);
      ```
 
 2. **`kame.h`**  
