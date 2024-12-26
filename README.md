@@ -159,7 +159,24 @@ The project uses **Arduino IDE v2.3.4** for compiling and editing the code, with
         ```
 
 2. **`kame.h`**  
-   - Handles the robot's movements and gait algorithms.  
+   - Handles the robot's movements and gait algorithms.
+     > There are 11 movements functions right now
+     ```cpp
+     DefaultPositions();
+     DefaultStand();
+     crabDefault();
+     crabStand();
+     jump();
+     yes();
+     no();
+     Dance(); //haven't implemented yet
+     moveForwward();
+     moveBackward();
+     turnLeft();
+     turnRight();
+     ```
+     [!TIP]
+     > I can add more movements as I wish . I think my code is very flexible and easy to understand but still have many rooms for improvements.  
 
 3. **`main.c`**  
    - Integrates the project’s core functionalities.  
