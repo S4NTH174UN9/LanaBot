@@ -267,18 +267,28 @@ The project uses **Arduino IDE v2.3.4** for compiling and editing the code, with
           ```
       ### Setup
       1. Upload the code to the ESP32 board using Arduino IDE.
-   > [!NOTE]
-   > connect IO0 with the ground and press the reset button. ESP32 will send "Waiting for download..." to the serial monitor
+> [!NOTE]
+> connect IO0 with the ground and press the reset button. ESP32 will send "Waiting for download..." to the serial monitor
       2. Connect the hardware components as in the schematics
-   > [!WARNING]
-   > Hardwares must be disconnected while the code is uploading
+> [!WARNING]
+> Hardwares must be disconnected while the code is uploading
       3. Access the web interface
          - Connect to the bot's WiFi network (`Kame Control`).
          - Open the browser and navigate to <http://192.168.4.1>.
 
-## Future Improvements  
-- Implement animations on the OLED display for a livelier and more engaging robot.  
-- Enhance PCB designs for better functionality and durability.  
-- Optimize the codebase for performance.  
+   ## Future Improvements  
+   - replace esp32s with esp32s3 for more performance
+   - add AI Features or Object dectections.
+   - Implement animations on the OLED display for a livelier and more engaging robot.  
+   - Enhance PCB designs for better functionality and durability.  
+   - Optimize the codebase for performance.  
 
----
+   ---
+
+   ## Credits
+   - **Libraries**: Contributions from the Arduino, ESPAsyncWebServer, U8g2lib, and MPU6050 communities.
+   - **Support**: Inspiration from CS50 and online ESP32 development resources.
+   - **Chat GPT**: Thanks ChatGPT 4.0 for making my code more prettier and efficient.
+   - **Idea**: Qwery3 and 4 By Erik on Youtube
+   - **Somecodes**: From Hash Include Electronics. Subcribe Them for more inspiring projects
+   - **Kame 3D Model**: By 
