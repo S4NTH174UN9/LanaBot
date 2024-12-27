@@ -204,20 +204,61 @@ The project uses **Arduino IDE v2.3.4** for compiling and editing the code, with
 > I can add more movements as I wish . I think my code is very flexible and easy to understand but still have many rooms for improvements.  
 
 3. **`main.c`**  
-   ### Libraries Used
-      - **Arduino.h**: Base framework for ESP32 development.
-        > V 2.3.4
-      - **ESPAsyncWebServer**: Handles the web server and WebSocket communication.  
-      - **ESP32Servo**: To control the light.  
-      - **MPU6050**: Sensor communication.  
-      - **U8g2lib**: OLED graphics rendering.  
-      - **LU9685**: Servo driver management.   
+   #### Libraries Used
+      ```cpp
+         #include "esp_camera.h"
+         #include <Arduino.h> //Arduino IDE 2.3.4
+         #include <WiFi.h>
+         #include <AsyncTCP.h> //V1.14
+         #include <ESPAsyncWebServer.h> //V3.4.5
+         #include <iostream>
+         #include <sstream>
+         #include <ESP32Servo.h> //V3.0.5
+         #include <Wire.h>
+         #include "LU9685.h"
+         #include "kame.h"
+         #include <U8g2lib.h> //by Oliver V2.35.30
+         #include <MPU6050.h> //by Electronic Cats V1.4.1
+      ```   
+   #### Key Functionalities
 
-      --- 
-   - firstly it contain an HTML HOMEPAGE with the control interface for the robot. It is hosted by esp32 to /Camera and CarInput Route
+      1. Web Server and WebSocket Communication
+         - **Home Page (`handleRoot`)**: Renders the HTML interface for controlling the bot.  
+         - **WebSocket Events (`onCarInputWebSocketEvent`)**: Processes real-time commands from the client.  
+         - **404 Handler (`handleNotFound`)**: Handles invalid requests.  
+         
+      2. Movement Control
+         - **Function**: `moveCar(int inputValue)`  
+           - Controls movement based on commands (e.g., UP, DOWN, LEFT, RIGHT, RESET).  
+           - Uses predefined movement functions like `moveForward()` and `turnLeft()`.  
+         
+      3. Battery and Current Monitoring
+         - Continuously updates and displays:  
+           - **Battery Level** (`batteryLevel`).  
+           - **Current** (`current`).  
+         
+      4. Camera Integration
+         - Streams video to the web interface using WebSocket (`wsCamera`).  
+         - Captures and displays live footage in the HTML interface.  
+         
+      5. Light, Speed, Pan, and Tilt Controls
+         - Interactive sliders in the UI for:  
+           - Adjusting light intensity (`sendButtonInput("Light", value)`).  
+           - Controlling camera angles (Pan and Tilt).  
+           - Setting movement speed.  
+      
+      ---
+
+   #### Web Interface
+   - **Built-in HTML/CSS** for a responsive design.  
+   - Features:  
+     - Camera feed display.  
+     - Directional control buttons.  
+     - Action buttons for predefined movements (DANCE, JUMP, etc.).  
+     - Slider controls for light, pan, tilt, and speed.  
      ![Screenshot of the web control interface](/assets/images/Control_Panel.png)
-   - 
----
+
+      ---
 
 ## Future Improvements  
 - Implement animations on the OLED display for a livelier and more engaging robot.  
