@@ -1,10 +1,35 @@
-# SECURITY KAME
+# SECURITY KAME - 
 #### Video Demo  <https://youtu.be/Wg2thCpf57M?si=TqslLem-lVwnqvRm>
 
 ---
 
-#### Description  
-This project is my CS50 final project.  
+#### Description    
+
+**Security Kame** is a versatile and interactive robotic system designed to provide enhanced surveillance and control capabilities. It integrates various hardware components and software functionalities, including an ESP32 camera module, servo motors, MPU6050 accelerometer, and a web-based control panel.
+
+---
+
+## Project Details
+
+- **Project Title**: Security Kame  
+- **Author**: San Thit Aung  
+- **GitHub**: [S4NTH174UN9](https://github.com/S4NTH174UN9)  
+- **edX ID**: `san_429`  
+- **City**: Yangon, Myanmar  
+
+---
+
+## Key Features
+
+1. **ESP32 Camera Integration**: Real-time video feed for remote monitoring.
+2. **Servo Motor Control**: Directional and action-based movement using servos.
+3. **WebSocket Communication**: Efficient real-time communication between client and server.
+4. **Web-based Control Panel**: User-friendly interface to control robot movements, light, and camera.
+5. **Battery and Current Monitoring**: Display current battery level and power usage.
+6. **Interactive Actions**: Predefined actions such as dance, jump, and crab movement.
+7. **Tilt and Pan Controls**: Adjustable camera angles for enhanced visibility.
+8. **1.3-inch OLED Display**: Provides real-time information and feedback to enhance interaction with the environment.
+9. **8002 Amplifier Integration**: Delivers audio feedback or alerts for a more interactive experience
 
 ### The Idea  
 Initially, I planned to build a website, but I was inspired by the **qwery3 quadrapot** project by [Erik Lely](https://youtu.be/PYqUsu_SGVk?si=kcckK-nIfiR_I-Pc). Erik didn't provide code or 3D files, but he mentioned it was a modified version of [Kame](https://www.thingiverse.com/thing:1265766) on Thingiverse.  
@@ -182,6 +207,7 @@ The project uses **Arduino IDE v2.3.4** for compiling and editing the code, with
    - Integrates the project’s core functionalities.  
    - firstly it contain an HTML HOMEPAGE with the control interface for the robot. It is hosted by esp32 to /Camera and CarInput Route
      ![Screenshot of the web control interface](/assets/images/Control_Panel.png)
+   - 
 ---
 
 ## Future Improvements  
