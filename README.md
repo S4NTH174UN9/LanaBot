@@ -1,8 +1,5 @@
 # SECURITY KAME - 
 #### Video Demo  <https://youtu.be/Wg2thCpf57M?si=TqslLem-lVwnqvRm>
-
----
-
 #### Description    
 
 **Security Kame** is a versatile and interactive robotic system designed to provide enhanced surveillance and control capabilities. It integrates various hardware components and software functionalities, including an ESP32 camera module, servo motors, MPU6050 accelerometer, and a web-based control panel.
@@ -31,7 +28,7 @@
 8. **1.3-inch OLED Display**: Provides real-time information and feedback to enhance interaction with the environment.
 9. **8002 Amplifier Integration**: Delivers audio feedback or alerts for a more interactive experience
 
-### The Idea  
+## The Idea  
 Initially, I planned to build a website, but I was inspired by the **qwery3 quadrapot** project by [Erik Lely](https://youtu.be/PYqUsu_SGVk?si=kcckK-nIfiR_I-Pc). Erik didn't provide code or 3D files, but he mentioned it was a modified version of [Kame](https://www.thingiverse.com/thing:1265766) on Thingiverse.  
 
 Here’s what I did:  
@@ -259,23 +256,23 @@ The project uses **Arduino IDE v2.3.4** for compiling and editing the code, with
         ![Screenshot of the web control interface](/assets/images/Control_Panel.png)
 
       ---
-   ### Usage Instructions
+   ## Usage Instructions
 
-      #### Prerequisites
-      1.  Install the required libraries via Arduino Library Manager.  
-      2.  Configure WiFi credentials:  
-         ```cpp
-         const char* ssid = "Your_SSID";
-         const char* password = "Your_Password";
-         ```
-      #### Setup
-      1.  Upload the code to the ESP32 board using Arduino IDE.
-      > [!NOTE]
-      > connect IO0 with the ground and press the reset button. ESP32 will send "Waiting for download..." to the serial monitor
-      2.  Connect the hardware components as in the schematics
-      > [!WARNING]
-      > Hardwares must be disconnected while the code is uploading
-      3.  Access the web interface
+      ### Prerequisites
+      1. Install the required libraries via Arduino Library Manager.  
+      2. Configure WiFi credentials:  
+          ```cpp
+            const char* ssid = "Your_SSID";
+            const char* password = "Your_Password";
+          ```
+      ### Setup
+      1. Upload the code to the ESP32 board using Arduino IDE.
+   > [!NOTE]
+   > connect IO0 with the ground and press the reset button. ESP32 will send "Waiting for download..." to the serial monitor
+      2. Connect the hardware components as in the schematics
+   > [!WARNING]
+   > Hardwares must be disconnected while the code is uploading
+      3. Access the web interface
          - Connect to the bot's WiFi network (`Kame Control`).
          - Open the browser and navigate to <http://192.168.4.1>.
 
