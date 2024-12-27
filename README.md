@@ -219,26 +219,26 @@ The project uses **Arduino IDE v2.3.4** for compiling and editing the code, with
       ```   
    ### Key Functionalities
 
-      1. **Web Server and WebSocket Communication**
+      - **Web Server and WebSocket Communication**
          - **Home Page (`handleRoot`)**: Renders the HTML interface for controlling the bot.  
          - **WebSocket Events (`onCarInputWebSocketEvent`)**: Processes real-time commands from the client.  
          - **404 Handler (`handleNotFound`)**: Handles invalid requests.  
          
-      2.  **Movement Control**
+      - **Movement Control**
          - **Function**: `moveCar(int inputValue)`  
          - Controls movement based on commands (e.g., UP, DOWN, LEFT, RIGHT, RESET).  
          - Uses predefined movement functions like `moveForward()` and `turnLeft()`.  
          
-      3.  Battery and Current Monitoring
+      - Battery and Current Monitoring
          - Continuously updates and displays:  
          - **Battery Level** (`batteryLevel`).  
          - **Current** (`current`).  
          
-      4.  Camera Integration
+      - Camera Integration
          - Streams video to the web interface using WebSocket (`wsCamera`).  
          - Captures and displays live footage in the HTML interface.  
          
-      5.  Light, Speed, Pan, and Tilt Controls
+      - Light, Speed, Pan, and Tilt Controls
          - Interactive sliders in the UI for:  
          - Adjusting light intensity (`sendButtonInput("Light", value)`).  
          - Controlling camera angles (Pan and Tilt).  
