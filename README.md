@@ -204,7 +204,16 @@ The project uses **Arduino IDE v2.3.4** for compiling and editing the code, with
 > I can add more movements as I wish . I think my code is very flexible and easy to understand but still have many rooms for improvements.  
 
 3. **`main.c`**  
-   - Integrates the project’s core functionalities.  
+   ### Libraries Used
+      - **Arduino.h**: Base framework for ESP32 development.
+        > V 2.3.4
+      - **ESPAsyncWebServer**: Handles the web server and WebSocket communication.  
+      - **ESP32Servo**: To control the light.  
+      - **MPU6050**: Sensor communication.  
+      - **U8g2lib**: OLED graphics rendering.  
+      - **LU9685**: Servo driver management.   
+
+      --- 
    - firstly it contain an HTML HOMEPAGE with the control interface for the robot. It is hosted by esp32 to /Camera and CarInput Route
      ![Screenshot of the web control interface](/assets/images/Control_Panel.png)
    - 
