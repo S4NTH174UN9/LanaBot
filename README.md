@@ -180,7 +180,8 @@ The project uses **Arduino IDE v2.3.4** for compiling and editing the code, with
 
 3. **`main.c`**  
    - Integrates the project’s core functionalities.  
-
+   - firstly it contain an HTML HOMEPAGE with the control interface for the robot. It is hosted by esp32 to /Camera and CarInput Route
+     ![Screenshot of the web control interface](/assets/images/Control_Panel.png)
 ---
 
 ## Future Improvements  
