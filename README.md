@@ -222,26 +222,26 @@ The project uses **Arduino IDE v2.3.4** for compiling and editing the code, with
       ```   
    #### Key Functionalities
 
-   1. Web Server and WebSocket Communication
+   1.  Web Server and WebSocket Communication
       - **Home Page (`handleRoot`)**: Renders the HTML interface for controlling the bot.  
       - **WebSocket Events (`onCarInputWebSocketEvent`)**: Processes real-time commands from the client.  
       - **404 Handler (`handleNotFound`)**: Handles invalid requests.  
       
-   2. Movement Control
+   2.  Movement Control
       - **Function**: `moveCar(int inputValue)`  
       - Controls movement based on commands (e.g., UP, DOWN, LEFT, RIGHT, RESET).  
       - Uses predefined movement functions like `moveForward()` and `turnLeft()`.  
       
-   3. Battery and Current Monitoring
+   3.  Battery and Current Monitoring
       - Continuously updates and displays:  
       - **Battery Level** (`batteryLevel`).  
       - **Current** (`current`).  
       
-   4. Camera Integration
+   4.  Camera Integration
       - Streams video to the web interface using WebSocket (`wsCamera`).  
       - Captures and displays live footage in the HTML interface.  
       
-   5. Light, Speed, Pan, and Tilt Controls
+   5.  Light, Speed, Pan, and Tilt Controls
       - Interactive sliders in the UI for:  
       - Adjusting light intensity (`sendButtonInput("Light", value)`).  
       - Controlling camera angles (Pan and Tilt).  
@@ -262,20 +262,20 @@ The project uses **Arduino IDE v2.3.4** for compiling and editing the code, with
    ### Usage Instructions
 
       #### Prerequisites
-      1. Install the required libraries via Arduino Library Manager.  
-      2. Configure WiFi credentials:  
+      1.  Install the required libraries via Arduino Library Manager.  
+      2.  Configure WiFi credentials:  
          ```cpp
          const char* ssid = "Your_SSID";
          const char* password = "Your_Password";
          ```
       #### Setup
-      1. Upload the code to the ESP32 board using Arduino IDE.
+      1.  Upload the code to the ESP32 board using Arduino IDE.
       > [!NOTE]
       > connect IO0 with the ground and press the reset button. ESP32 will send "Waiting for download..." to the serial monitor
-      2. Connect the hardware components as in the schematics
+      2.  Connect the hardware components as in the schematics
       > [!WARNING]
       > Hardwares must be disconnected while the code is uploading
-      3. Access the web interface
+      3.  Access the web interface
          - Connect to the bot's WiFi network (`Kame Control`).
          - Open the browser and navigate to <http://192.168.4.1>.
 
